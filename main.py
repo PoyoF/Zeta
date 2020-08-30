@@ -14,11 +14,14 @@ class ZetaMoveGame:
     # 背景
     BG=pygame.image.load("SpringElmTree.jpg").convert_alpha()
     BG=pygame.transform.smoothscale(BG,SCREENRect.size)
-    # Zetaのスプライト
-    #(画像ファイル名, 初期位置, スプライトサイズ,　スプライト速さ)
+
+    # Zetaのスプライト(サイズ：(50,50))
+    #画像ファイル名:"inkscape.png"
+    #スプライト、さいしょのいち:(100,200)
+    #スプライト速さ:(5,0)
     Sprite.containers = self.all = pygame.sprite.RenderUpdates()
-    self.Zeta = Sprite("inkscape.png",(100,200),(50,50), (5,0))
-    
+    self.Zeta = Sprite(
+      "inkscape.png",(100,200),(50,50), (5,0)) 
     clock =pygame.time.Clock()
     # ループ部
     while True:
